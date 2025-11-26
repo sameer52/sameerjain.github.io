@@ -5,7 +5,7 @@
     font-family: 'Inter', sans-serif;
 }
 
-/* --- Header Shrink Animation (Unchanged) --- */
+/* --- Header Shrink Animation --- */
 #header-nav {
     transition: padding 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
     position: fixed;
