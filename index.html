@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="images/favicon.ico">
     <title>My Portfolio | Sameer Jain</title>
 
     <!-- Tailwind CDN -->
@@ -11,46 +13,11 @@
     <!-- Load External Tailwind Config -->
     <script src="js/tailwind-config.js"></script>
 
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
-    <style>
-        :root { font-family: 'Inter', sans-serif; }
-
-        #header-nav {
-            transition: padding 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
-                        background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
-            position: fixed;
-            padding-top: 1.5rem;
-            padding-bottom: 1.5rem;
-        }
-        #header-nav.scrolled {
-            padding-top: 0.75rem;
-            padding-bottom: 0.75rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-                        0 2px 4px -2px rgba(0, 0, 0, 0.1);
-        }
-        #mobile-menu {
-            top: 100%;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-in-out, background-color 0.3s ease-in-out;
-            border-top-width: 0px;
-        }
-        #mobile-menu.open {
-            max-height: 50vh;
-            border-top-width: 1px;
-        }
-        #header-nav h2, #header-nav a, #intro-text, #name-text,
-        #theme-toggle, #mobile-menu-button {
-            transition: all 0.3s ease-in-out;
-        }
-        #header-nav.scrolled h2 {
-            font-size: 1.25rem;
-        }
-        #header-nav.scrolled #desktop-nav a {
-            font-size: 0.875rem;
-        }
-    </style>
+    <!-- CSS -->
+    <style src="css/styles.css"></style>
 </head>
 
 <body class="font-sans bg-gray-50 text-gray-800 transition-colors duration-500">
