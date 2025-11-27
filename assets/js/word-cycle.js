@@ -1,17 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
     const words = [
-        "design",
         "engineering",
         "technology",
         "robotics",
+        "Computer Aided Design",
         "linux",
         "embedded systems",
-        "SolidWorks CAD",
+        "intelligent design",
         "Computational Fluid Dynamics",
         "Finite Element Analysis",
         "rapid prototyping",
         "manufacturing",
-        "systems integration"
+        "systems integration",
+        "human centric design"
     ];
 
     const el = document.getElementById("cycling-word");

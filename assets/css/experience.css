@@ -51,7 +51,7 @@
 .exp-txt-wrapper {
     /* No mobile styles needed here unless you want to override a global style */
     width: 80%;
-    margin-left: 0.1rem; 
+    margin-left: 0; 
     padding-left: 0;
 }
 
