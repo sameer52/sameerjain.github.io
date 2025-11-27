@@ -1,0 +1,224 @@
+/* about.css */
+
+.about-section {
+    /* py-16 sm:py-16 */
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    /* bg-gray-100 */
+    background-color: #f3f4f6;
+    /* shadow-inner (approximation) */
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); 
+    /* transition-colors duration-500 scroll-mt-16 */
+    transition: background-color 0.5s;
+    scroll-margin-top: 4rem;
+}
+
+/* Max Width Wrapper */
+.about-content-wrapper {
+    /* max-w-5xl mx-auto px-4 sm:px-6 */
+    max-width: 64rem; /* max-w-5xl */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem; /* px-4 */
+    padding-right: 1rem; /* px-4 */
+}
+
+/* --- Breakpoint for Small (sm) screens --- */
+@media (min-width: 640px) {
+    .about-content-wrapper {
+        padding-left: 1.5rem; /* sm:px-6 */
+        padding-right: 1.5rem; /* sm:px-6 */
+    }
+}
+
+
+/* -------------------------------------- */
+/* --- Title and Main Flex Container --- */
+/* -------------------------------------- */
+
+.about-title {
+    /* text-4xl font-bold mb-8 text-center text-indigo-700 transition-colors duration-500 */
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #3730a3; /* text-indigo-700 */
+    transition: color 0.5s;
+}
+
+.about-main-flex-container {
+    /* flex flex-col md:flex-row items-start gap-10 */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5rem; /* gap-10 (40px) */
+}
+
+/* -------------------------------------- */
+/* --- Image Column (Mobile & Desktop) --- */
+/* -------------------------------------- */
+
+.about-img-column {
+    /* w-full md:w-1/4 flex-shrink-0 order-first */
+    width: 100%; /* w-full */
+    flex-shrink: 0;
+    order: -1; /* order-first (always display image first) */
+}
+
+.about-img-container {
+    /* mx-auto w-36 h-36 md:w-full md:h-auto rounded-3xl overflow-hidden shadow-2xl border-4 border-white transition-all */
+    margin-left: auto;
+    margin-right: auto;
+    width: 9rem; /* w-36 (144px) */
+    height: 9rem; /* h-36 (144px) */
+    border-radius: 1.5rem; /* rounded-3xl */
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25); /* shadow-2xl */
+    border: 4px solid #ffffff; /* border-4 border-white */
+    transition: all 0.2s;
+}
+
+.about-img {
+    /* w-full h-full object-cover block */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* -------------------------------------- */
+/* --- Text Column --- */
+/* -------------------------------------- */
+
+.about-text-column {
+    /* w-full md:w-3/4 space-y-6 text-lg */
+    width: 100%; /* w-full */
+    font-size: 1.125rem; /* text-lg */
+    line-height: 1.75rem;
+}
+
+/* space-y-6 (Applies vertical margin between paragraphs) */
+.about-text-column p:not(:last-child) {
+    margin-bottom: 1.5rem; /* 24px */
+}
+
+/* -------------------------------------- */
+/* --- Career at a Glace --- */
+/* -------------------------------------- */
+
+.about-divider {
+    /* mt-8 border-gray-200 */
+    margin-top: 2rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.about-stats-section {
+    /* pt-6 */
+    padding-top: 1.5rem;
+}
+
+.about-stats-title {
+    /* text-2xl font-semibold mb-4 text-indigo-700 text-center md:text-left */
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #3730a3; /* text-indigo-700 */
+    text-align: center;
+}
+
+.about-stats-grid {
+    /* grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 */
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* grid-cols-2 */
+    gap: 0.75rem; /* gap-3 (12px) */
+}
+
+/* --- Stat Card --- */
+
+.about-stat-card {
+    /* bg-indigo-100 ring-1 ring-indigo-300 font-medium p-3 rounded-xl shadow-sm flex flex-col items-center */
+    background-color: #eef2ff; /* bg-indigo-100 */
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); /* shadow-sm */
+    border: 1px solid #a5b4fc; /* ring-1 ring-indigo-300 */
+    font-weight: 500; /* font-medium */
+    padding: 0.75rem; /* p-3 */
+    border-radius: 0.75rem; /* rounded-xl */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-stat-card-clickable {
+    /* Specific styles for the card wrapped in <a> tag (for hover effects) */
+    transition: all 0.2s; /* transition-all duration-200 */
+}
+
+.about-stat-link:hover .about-stat-card-clickable {
+    /* transform hover:scale-[1.05] */
+    transform: scale(1.05);
+}
+
+.about-stat-value {
+    /* text-xl text-indigo-800 font-bold leading-none */
+    font-size: 1.25rem;
+    line-height: 1.25; /* leading-none */
+    color: #3730a3; /* text-indigo-800 */
+    font-weight: 700; /* font-bold */
+}
+
+.about-stat-label {
+    /* text-md text-gray-500 font-medium mt-1 */
+    font-size: 1rem; /* text-md (Tailwind's 'text-base' is 1rem, but this fits the context) */
+    line-height: 1.5rem;
+    color: #6b7280; /* text-gray-500 */
+    font-weight: 500; /* font-medium */
+    margin-top: 0.25rem; /* mt-1 */
+}
+
+
+/* -------------------------------------- */
+/* --- Media Query for Desktop (md & lg) --- */
+/* -------------------------------------- */
+
+@media (min-width: 768px) {
+    /* Main Flex Container: md:flex-row */
+    .about-main-flex-container {
+        flex-direction: row;
+    }
+
+    /* Image Column: md:w-1/4 */
+    .about-img-column {
+        width: 25%; /* 1/4 */
+    }
+    
+    /* Image Container: md:w-full md:h-auto */
+    .about-img-container {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Text Column: md:w-3/4 */
+    .about-text-column {
+        width: 75%;
+    }
+    
+    /* Stats Title: md:text-left */
+    .about-stats-title {
+        text-align: left;
+    }
+    
+    /* Stats Grid: md:grid-cols-3 */
+    .about-stats-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+
+@media (min-width: 1024px) {
+    /* Stats Grid: lg:grid-cols-5 */
+    .about-stats-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+}

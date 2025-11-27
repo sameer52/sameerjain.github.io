@@ -1,0 +1,132 @@
+/* experience.css */
+
+.exp-container {
+    /* flex flex-col md:flex-row items-center md:items-start */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* mb-8 */
+    margin-bottom: 2rem;
+    /* bg-gray-50 */
+    background-color: #f9fafb;
+    /* rounded-2xl */
+    border-radius: 1rem;
+    /* shadow */
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    /* p-6 */
+    padding: 1.5rem;
+    /* transition-all duration-200 */
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+}
+
+.exp-container:hover {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.exp-img-wrapper {
+    /* flex */
+    display: flex;
+    /* justify-center */
+    justify-content: center;
+    /* mb-6 */
+    margin-bottom: 1.5rem;
+    
+    /* md:w-1/5, md:justify-start, and md:mb-0 are handled in the media query below */
+}
+
+.exp-img {
+    /* w-40 h-40 */
+    width: 10rem; /* 160px */
+    height: 10rem; /* 160px */
+    /* object-contain */
+    object-fit: contain;
+    /* rounded-xl */
+    border-radius: 0.75rem;
+    /* shadow-md */
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.exp-txt-wrapper {
+    /* No mobile styles needed here unless you want to override a global style */
+    width: 80%;
+    margin-left: 0.1rem; 
+    padding-left: 0;
+}
+
+.exp-title {
+    /* text-2xl */
+    font-size: 1.5rem; /* 24px */
+    line-height: 2rem; /* 32px */
+    /* font-semibold */
+    font-weight: 600;
+    /* text-indigo-600 */
+    color: #4f46e5;
+    /* mb-2 */
+    margin-bottom: 0.5rem;
+}
+
+.exp-description {
+    /* text-gray-700 */
+    color: #374151;
+    /* mb-4 */
+    margin-bottom: 1rem;
+}
+
+.exp-tags {
+    margin-top: 1rem; /* mt-4 */
+    display: flex; /* flex */
+    flex-wrap: wrap; /* flex-wrap */
+    gap: 0.5rem; /* gap-2 */
+}
+
+.exp-tag {
+    background-color: #e5e7eb; /* bg-gray-200 */
+    color: #111827; /* text-gray-900 */
+    font-size: 0.875rem; /* text-sm */
+    line-height: 1.25rem;
+    font-weight: 500; /* font-medium */
+    padding-left: 0.5rem; /* px-2 */
+    padding-right: 0.5rem;
+    padding-top: 0.25rem; /* py-1 */
+    padding-bottom: 0.25rem;
+    border-radius: 0.375rem; /* rounded-md */
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+}
+
+.exp-bulletpoints {
+    margin-top: 1rem; /* mt-4 */
+    display: flex; /* flex */
+    flex-wrap: wrap; /* flex-wrap */
+    gap: 0.5rem; /* gap-2 */
+}
+
+
+/* Medium (md) Breakpoint (768px and up) */
+@media (min-width: 768px) {
+    .exp-img-wrapper {
+        /* md:w-1/5 */
+        width: 20%;
+        /* md:justify-start */
+        justify-content: flex-start;
+        /* md:mb-0 */
+        margin-bottom: 0;
+    }
+
+    .exp-txt-wrapper {
+        /* md:w-4/5 */
+        width: 80%;
+        
+        /* Replace padding-left with margin-left for spacing */
+        /* This creates a 1.5rem (p-6 equivalent) space between the logo and the text */
+        margin-left: 0.1rem; 
+        
+        /* This explicitly removes any default left padding if you need it */
+        padding-left: 0; 
+    }
+}
+
+/* Small (sm) Breakpoint () */
+@media (min-width: 768px) {
+}
