@@ -1,5 +1,7 @@
 /* sm-projs.css */
 
+/* for small screens, reduce the text size to sm (from md) */
+
 .sm-proj-card {
     /* @apply flex flex-col bg-white rounded-2xl shadow hover:shadow-lg transition-all duration-200 overflow-hidden; */
     
@@ -31,11 +33,11 @@
 
 .sm-proj-card-title {
     /* @apply text-2xl font-semibold text-indigo-600 mb-3; */
-    font-size: 1.5rem; /* text-2xl */
-    line-height: 2rem;
-    font-weight: 600; /* font-semibold */
-    color: #4f46e5; /* text-indigo-600 */
-    margin-bottom: 0.75rem; /* mb-3 */
+    font-size: 1rem; /* text-2xl .. Equivalent to text-xl on mobile */
+    line-height: 1.5rem;
+    font-weight: 600; /* font-semibold .. Assuming you want the font-semibold from before */
+    color: #4f46e5; /* text-indigo-600 .. Example color, if needed */
+    margin-bottom: 0.75rem; /* mb-3 .. */
 }
 
 .sm-proj-card-footer {
@@ -60,4 +62,21 @@
 .sm-proj-card-link:hover {
     /* hover:underline */
     text-decoration: underline;
+}
+
+/* -------------------------------------- */
+/* ---- Media Query for Desktop (md) ---- */
+/* 
+   when the screen is larger (than mobile)
+   it will take the following settings
+*/
+/* -------------------------------------- */
+
+@media (min-width: 768px) {
+    /* Main Flex Container: md:flex-row */
+    .sm-proj-card-title {
+        /* Equivalent to text-2xl on desktop */
+        font-size: 1.5rem; 
+        line-height: 2rem;
+    }
 }
