@@ -33,11 +33,11 @@
 
 .sm-proj-card-title {
     /* @apply text-2xl font-semibold text-indigo-600 mb-3; */
-    font-size: 1rem; /* text-2xl .. Equivalent to text-xl on mobile */
+    font-size: 1rem; /* Equivalent to text-xl on mobile */
     line-height: 1.5rem;
-    font-weight: 600; /* font-semibold .. Assuming you want the font-semibold from before */
-    color: #4f46e5; /* text-indigo-600 .. Example color, if needed */
-    margin-bottom: 0.75rem; /* mb-3 .. */
+    font-weight: 600; /* Assuming you want the font-semibold from before */
+    color: #4f46e5; /* Example color, if needed */
+    margin-bottom: 0.75rem;
 }
 
 .sm-proj-card-footer {
