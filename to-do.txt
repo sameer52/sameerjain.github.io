@@ -1,0 +1,17 @@
+replace portrait (about section)
+fix CSS
+fix section CSS and other CSS class names
+correct "Career at a Glance" data (about section)
+add photo of spool holder and PC 3 projects (projects section)
+correct certification padding CSS (mobile view)(certifications section)
+correct skills section padding (skills section)
+shorten experience section wording (experience section)
+fix hamburger menu (mobile view) (header section)
+add aother links (github & OSF/RG)(etsy?) (new section)
+correct the email link (contact section)
+fix certification links (certifications section)
+make project links/pages (projects section)
+add photos to the project folder
+change background of company logos (experience section)
+change favicon
+change the "Sameer Jain" at the top left  (header section)
