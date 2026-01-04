@@ -5,17 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio | Sameer Jain</title>
 
-    <link rel="stylesheet" href="assets/css/styles.css">     
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/home.css">
     <link rel="stylesheet" href="assets/css/about.css">
     <link rel="stylesheet" href="assets/css/experience.css">
     <link rel="stylesheet" href="assets/css/lg-project.css">
     <link rel="stylesheet" href="assets/css/sm-project.css">
+    <link rel="stylesheet" href="assets/css/skills.css">
+    <link rel="stylesheet" href="assets/css/certifications.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
     
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
     <script src="assets/js/tailwind-config.js"></script>
+    <script src="assets/js/header-scroll-animation.js"></script> 
     <script src="assets/js/scroll-indicator.js"></script> 
     <script src="assets/js/word-cycle.js"></script> 
     
@@ -23,34 +29,32 @@
 
 <body class="font-sans bg-gray-50 text-gray-800 transition-colors duration-500">
 
-    <header id="header-nav" class="top-0 left-0 right-0 z-50 bg-white transition-colors duration-500">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center relative z-50">
-            <h2 id="logo-text" class="text-2xl font-bold text-indigo-600">
+    <header id="header-nav" class="main-header">
+        <div class="navbar-container">
+            <h2 id="logo-text" class="logo">
                 Sameer Jain
             </h2>
             
-            <div class="flex items-center space-x-3 sm:space-x-5 lg:space-x-8">
-                
-                <nav id="desktop-nav" class="hidden sm:flex items-center space-x-5 lg:space-x-4">
-                    </nav>
+            <div class="nav-actions">
+                <nav id="desktop-nav" class="desktop-nav"> </nav>
 
                 <!-- <button id="theme-toggle" class="text-xs font-semibold px-3 py-1 rounded-full shadow-inner hover:bg-gray-300 ml-4 transition-colors duration-200">
                     Theme: ENG
                 </button> -->
-                
-                <button id="mobile-menu-button" class="sm:hidden p-2 rounded-md transition-colors duration-200">
-                    <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+
+                <button id="mobile-menu-button" class="mobile-menu-btn">
+                    <svg id="menu-icon" class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
-                    <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <svg id="close-icon" class="icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
                 </button>
             </div>
         </div>
 
-        <div id="mobile-menu" class="absolute left-0 right-0 bg-white/95 backdrop-blur-sm shadow-lg border-gray-100 transition-all duration-200 z-40">
-            <div id="mobile-nav-links" class="flex flex-col p-4 space-y-2">
+        <div id="mobile-menu" class="mobile-menu-dropdown hidden">
+            <div id="mobile-nav-links" class="mobile-nav-container">
                 </div>
         </div>
     </header>
@@ -101,21 +105,18 @@
 
                 <div class="flex flex-col md:flex-row items-start gap-10">
                     <div class="w-full md:w-1/4 flex-shrink-0 order-first">
-                        <div class="mx-auto w-36 h-36 md:w-full md:h-auto rounded-3xl overflow-hidden shadow-2xl border-4 border-white transition-all">
+                        <div class="mx-auto w-36 h-36 md:w-full md:h-64 rounded-3xl overflow-hidden shadow-2xl border-4 border-white transition-all">
                             <img 
                                 src="assets/img/about/sj-pfp-ai-temp.png" 
                                 alt="Professional Portrait of Sameer Jain" 
-                                class="w-full h-full object-cover block"
+                                class="w-full h-full object-cover object-block"
                             >
                         </div>
                     </div>
 
-                    <div class="w-full md:w-3/4 space-y-6 text-lg">
+                    <div class="w-full md:w-3/4 space-y-6 text-xl">
                         <p>
-                            Mechanical engineer specializing in <strong>electromechanical systems</strong>, <strong>rapid prototyping</strong>, and <strong>CAD-driven design</strong>. My work spans mechanical modeling, embedded programming, and system integration, giving me a broad toolkit for turning ideas into functional prototypes. I’ve built everything from custom SFF PC cases to robotics concepts, applying a mix of analytical thinking and hands-on experimentation to produce reliable results.
-                        </p>
-                        <p>
-                            Continuously exploring new workflows in CAD, Linux, and embedded hardware, always looking for better ways to streamline design and build processes. I enjoy cross-disciplinary collaboration and environments where people iterate quickly, communicate clearly, and share ownership of the solution. My goal is to build systems that are not only technically sound, but intuitive, maintainable, and carefully thought out.
+                            As a mechanical engineer focused on CAD-driven design and rapid prototyping, I bridge the gap between digital concepts and physical reality. My work blends mechanical modeling, embedded hardware, and Linux-based workflows, enabling me to build everything from custom SFF PC cases to robotics concepts with speed and creativity. I thrive on learning quickly, thinking beyond standard solutions, and collaborating across disciplines to create intuitive, well-considered systems that are built to last.
                         </p>
                     </div>
                 </div>
@@ -272,7 +273,7 @@
                         <img src="https://github.com/sameer52/images-icons-data/blob/main/images/itx-case/itxcase-front-top-iso-inside-cpu.JPG?raw=true" alt="PC Case CAD Img" class="w-full h-60 object-cover">
                         <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-white to-transparent"></div>
                         <div class="p-6 absolute bottom-0 left-0 w-full h-1/3 items-end">
-                            <h3 class="text-2xl font-semibold text-indigo-600 mb-3">Custom PC Case CFD Analysis</h3>
+                            <h3 class="text-2xl font-semibold text-indigo-600 mb-3">PC CFD Analysis</h3>
                         </div>
                     </div>
                     <div class="p-6 pb-3 flex flex-col flex-grow">
@@ -331,413 +332,425 @@
                 </div>
             </div>
 
+            <!-- REMOVED PROJECTS: CNC Machine, Fan Mount, GPU Fan Duct -->
+
+            <!-- SMALLER PROJECTS -->
             <div class="pt-6 max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-5">
-                <!-- SMALLER PROJECTS -->
-                <div class="flex flex-col bg-white rounded-2xl shadow hover:shadow-lg transition-all duration-200 overflow-hidden">
-                    <div class="relative">
-                        <img src="https://github.com/sameer52/images-icons-data/blob/main/images/itx-case/itxcase-front-top-iso-inside-cpu.JPG?raw=true" alt="Placeholder Image" class="w-full h-40 object-cover">
-                        <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-white to-transparent"></div>
-                        <div class="p-6 absolute bottom-0 left-0 w-full h-1/3 items-end">
+                
+                <div class="sm-proj-card"> <!-- PC Case Design -->
+                    <div class="sm-proj-card-media">
+                        <img class="sm-proj-card-image" src="assets/img/projects/itxcase-front-top-iso-inside-cpu.JPG" alt="PC Case Design" >
+                        <div class="sm-proj-card-gradient"></div>
+                        <div class="sm-proj-card-title-wrapper">
                             <h3 class="sm-proj-card-title">PC Case Design</h3>
                         </div>
                     </div>
-                    <div class="px-6 pb-3 flex flex-col flex-grow">
-                        <a href="https://github.com/sameer52/Sameer-Jain/blob/main/README.md" target="_blank" class="mt-3 text-indigo-600 font-medium hover:underline">View Project →</a>
+
+                    <div class="sm-proj-card-footer">
+                        <a href="https://github.com/sameer52/Sameer-Jain/blob/main/README.md" target="_blank" class="sm-proj-card-link" >
+                            View Project →
+                        </a>
                     </div>
                 </div>
-                <div class="flex flex-col bg-white rounded-2xl shadow hover:shadow-lg transition-all duration-200 overflow-hidden">
-                    <div class="relative">
-                        <img src="assets/img/projects/diy-cnc-machine-full.jpg" alt="Placeholder Image" class="w-full h-40 object-cover">
-                        <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-white to-transparent"></div>
-                        <div class="p-6 absolute bottom-0 left-0 w-full h-1/3 items-end">
-                            <h3 class="text-2xl font-semibold text-indigo-600 mb-3">CNC Machine</h3>
+
+                <div class="sm-proj-card"> <!-- Digital Clock -->
+                    <div class="sm-proj-card-media">
+                        <img class="sm-proj-card-image" src="assets/img/projects/filament-tube-clock.jpg" alt="digital clock img" >
+                        <div class="sm-proj-card-gradient"></div>
+                        <div class="sm-proj-card-title-wrapper">
+                            <h3 class="sm-proj-card-title">Digital Clock</h3>
                         </div>
                     </div>
-                    <div class="px-6 pb-3 flex flex-col flex-grow">
-                        <a href="https://github.com/sameer52/Sameer-Jain/blob/main/README.md" target="_blank" class="mt-3 text-indigo-600 font-medium hover:underline">View Project →</a>
+
+                    <div class="sm-proj-card-footer">
+                        <a href="https://github.com/sameer52/Sameer-Jain/blob/main/README.md" target="_blank" class="sm-proj-card-link" >
+                            View Project →
+                        </a>
                     </div>
                 </div>
-                <div class="flex flex-col bg-white rounded-2xl shadow hover:shadow-lg transition-all duration-200 overflow-hidden">
-                    <div class="relative">
-                        <img src="assets/img/projects/filament-tube-clock.jpg" alt="Placeholder Image" class="w-full h-40 object-cover">
-                        <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-white to-transparent"></div>
-                        <div class="p-6 absolute bottom-0 left-0 w-full h-1/3 items-end">
-                            <h3 class="text-2xl font-semibold text-indigo-600 mb-3">Digital Clock</h3>
+
+                <div class="sm-proj-card"> <!-- Robot Control App -->
+                    <div class="sm-proj-card-media">
+                        <img class="sm-proj-card-image" src="assets/img/projects/web-control-dashboard.png" alt="robot ctrl app img" >
+                        <div class="sm-proj-card-gradient"></div>
+                        <div class="sm-proj-card-title-wrapper">
+                            <h3 class="sm-proj-card-title">Robot Ctrl App</h3>
                         </div>
                     </div>
-                    <div class="px-6 pb-3 flex flex-col flex-grow">
-                        <a href="https://github.com/sameer52/Sameer-Jain/blob/main/README.md" target="_blank" class="mt-3 text-indigo-600 font-medium hover:underline">View Project →</a>
+
+                    <div class="sm-proj-card-footer">
+                        <a href="https://github.com/sameer52/Sameer-Jain/blob/main/README.md" target="_blank" class="sm-proj-card-link" >
+                            View Project →
+                        </a>
                     </div>
                 </div>
-                <div class="flex flex-col bg-white rounded-2xl shadow hover:shadow-lg transition-all duration-200 overflow-hidden">
-                    <div class="relative">
-                        <img src="assets/img/other/placeholder-image-vertical.png" alt="Placeholder Image" class="w-full h-40 object-cover">
-                        <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-white to-transparent"></div>
-                        <div class="p-6 absolute bottom-0 left-0 w-full h-1/3 items-end">
-                            <h3 class="text-2xl font-semibold text-indigo-600 mb-3">Robot Ctrl App</h3>
+                
+                <div class="sm-proj-card"> <!-- Racing Sim -->
+                    <div class="sm-proj-card-media">
+                        <img class="sm-proj-card-image" src="assets/img/projects/3d-printed-racing-wheel.jpg" alt="racing sim img" >
+                        <div class="sm-proj-card-gradient"></div>
+                        <div class="sm-proj-card-title-wrapper">
+                            <h3 class="sm-proj-card-title">Racing Sim</h3>
                         </div>
                     </div>
-                    <div class="px-6 pb-3 flex flex-col flex-grow">
-                        <a href="https://github.com/sameer52/Sameer-Jain/blob/main/README.md" target="_blank" class="mt-3 text-indigo-600 font-medium hover:underline">View Project →</a>
+
+                    <div class="sm-proj-card-footer">
+                        <a href="https://github.com/sameer52/Sameer-Jain/blob/main/README.md" target="_blank" class="sm-proj-card-link" >
+                            View Project →
+                        </a>
                     </div>
                 </div>
-                <div class="flex flex-col bg-white rounded-2xl shadow hover:shadow-lg transition-all duration-200 overflow-hidden">
-                    <div class="relative">
-                        <img src="assets/img/projects/3d-printed-racing-wheel.jpg" alt="Placeholder Image" class="w-full h-40 object-cover">
-                        <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-white to-transparent"></div>
-                        <div class="p-6 absolute bottom-0 left-0 w-full h-1/3 items-end">
-                            <h3 class="text-2xl font-semibold text-indigo-600 mb-3">Racing Sim</h3>
+
+                <div class="sm-proj-card"> <!-- Flight Sim -->
+                    <div class="sm-proj-card-media">
+                        <img class="sm-proj-card-image" src="assets/img/projects/diy-hall-effect-flight-sim-controls.png" alt="flight sim img" >
+                        <div class="sm-proj-card-gradient"></div>
+                        <div class="sm-proj-card-title-wrapper">
+                            <h3 class="sm-proj-card-title">Flight Sim</h3>
                         </div>
                     </div>
-                    <div class="px-6 pb-3 flex flex-col flex-grow">
-                        <a href="https://github.com/sameer52/Sameer-Jain/blob/main/README.md" target="_blank" class="mt-3 text-indigo-600 font-medium hover:underline">View Project →</a>
+
+                    <div class="sm-proj-card-footer">
+                        <a href="https://github.com/sameer52/Sameer-Jain/blob/main/README.md" target="_blank" class="sm-proj-card-link" >
+                            View Project →
+                        </a>
                     </div>
                 </div>
-                <div class="flex flex-col bg-white rounded-2xl shadow hover:shadow-lg transition-all duration-200 overflow-hidden">
-                    <div class="relative">
-                        <img src="assets/img/projects/diy-hall-effect-flight-sim-controls.png" alt="Placeholder Image" class="w-full h-40 object-cover">
-                        <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-white to-transparent"></div>
-                        <div class="p-6 absolute bottom-0 left-0 w-full h-1/3 items-end">
-                            <h3 class="text-2xl font-semibold text-indigo-600 mb-3">Flight Sim</h3>
+                
+                <div class="sm-proj-card"> <!-- Filament Mount -->
+                    <div class="sm-proj-card-media">
+                        <img class="sm-proj-card-image" src="assets/img/other/placeholder-image-vertical.png" alt="filament mount img" >
+                        <div class="sm-proj-card-gradient"></div>
+                        <div class="sm-proj-card-title-wrapper">
+                            <h3 class="sm-proj-card-title">Filament Mount</h3>
                         </div>
                     </div>
-                    <div class="px-6 pb-3 flex flex-col flex-grow">
-                        <a href="https://github.com/sameer52/Sameer-Jain/blob/main/README.md" target="_blank" class="mt-3 text-indigo-600 font-medium hover:underline">View Project →</a>
+
+                    <div class="sm-proj-card-footer">
+                        <a href="https://github.com/sameer52/Sameer-Jain/blob/main/README.md" target="_blank" class="sm-proj-card-link" >
+                            View Project →
+                        </a>
                     </div>
                 </div>
-                <div class="flex flex-col bg-white rounded-2xl shadow hover:shadow-lg transition-all duration-200 overflow-hidden">
-                    <div class="relative">
-                        <img src="assets/img/other/placeholder-image-vertical.png" alt="Placeholder Image" class="w-full h-40 object-cover">
-                        <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-white to-transparent"></div>
-                        <div class="p-6 absolute bottom-0 left-0 w-full h-1/3 items-end">
-                            <h3 class="text-2xl font-semibold text-indigo-600 mb-3">Fan Mount</h3>
+                
+                <div class="sm-proj-card"> <!-- Nissan 350Z -->
+                    <div class="sm-proj-card-media">
+                        <img class="sm-proj-card-image" src="assets/img/projects/350z-background-edited.jpg" alt="nissan 350z img" >
+                        <div class="sm-proj-card-gradient"></div>
+                        <div class="sm-proj-card-title-wrapper">
+                            <h3 class="sm-proj-card-title">Nissan 350Z</h3>
                         </div>
                     </div>
-                    <div class="px-6 pb-3 flex flex-col flex-grow">
-                        <a href="https://github.com/sameer52/Sameer-Jain/blob/main/README.md" target="_blank" class="mt-3 text-indigo-600 font-medium hover:underline">View Project →</a>
+
+                    <div class="sm-proj-card-footer">
+                        <a href="https://github.com/sameer52/Sameer-Jain/blob/main/README.md" target="_blank" class="sm-proj-card-link" >
+                            View Project →
+                        </a>
                     </div>
                 </div>
-                <div class="flex flex-col bg-white rounded-2xl shadow hover:shadow-lg transition-all duration-200 overflow-hidden">
-                    <div class="relative">
-                        <img src="assets/img/other/placeholder-image-vertical.png" alt="Placeholder Image" class="w-full h-40 object-cover">
-                        <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-white to-transparent"></div>
-                        <div class="p-6 absolute bottom-0 left-0 w-full h-1/3 items-end">
-                            <h3 class="text-2xl font-semibold text-indigo-600 mb-3">GPU Fan Duct</h3>
+                
+                <div class="sm-proj-card"> <!-- Aventador -->
+                    <div class="sm-proj-card-media">
+                        <img class="sm-proj-card-image" src="assets/img/projects/aventador-generate-temp.png" alt="aventador img" >
+                        <div class="sm-proj-card-gradient"></div>
+                        <div class="sm-proj-card-title-wrapper">
+                            <h3 class="sm-proj-card-title">Aventador</h3>
                         </div>
                     </div>
-                    <div class="px-6 pb-3 flex flex-col flex-grow">
-                        <a href="https://github.com/sameer52/Sameer-Jain/blob/main/README.md" target="_blank" class="mt-3 text-indigo-600 font-medium hover:underline">View Project →</a>
+
+                    <div class="sm-proj-card-footer">
+                        <a href="https://github.com/sameer52/Sameer-Jain/blob/main/README.md" target="_blank" class="sm-proj-card-link" >
+                            View Project →
+                        </a>
                     </div>
                 </div>
-                <div class="flex flex-col bg-white rounded-2xl shadow hover:shadow-lg transition-all duration-200 overflow-hidden">
-                    <div class="relative">
-                        <img src="assets/img/other/placeholder-image-vertical.png" alt="Placeholder Image" class="w-full h-40 object-cover">
-                        <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-white to-transparent"></div>
-                        <div class="p-6 absolute bottom-0 left-0 w-full h-1/3 items-end">
-                            <h3 class="text-2xl font-semibold text-indigo-600 mb-3">Filament Mount</h3>
+                
+                <div class="sm-proj-card"> <!-- 2018 F1 Car -->
+                    <div class="sm-proj-card-media">
+                        <img class="sm-proj-card-image" src="assets/img/projects/2018-f1-car-sw.png" alt="2018 f1 car img" >
+                        <div class="sm-proj-card-gradient"></div>
+                        <div class="sm-proj-card-title-wrapper">
+                            <h3 class="sm-proj-card-title">2018 F1 Car</h3>
                         </div>
                     </div>
-                    <div class="px-6 pb-3 flex flex-col flex-grow">
-                        <a href="https://github.com/sameer52/Sameer-Jain/blob/main/README.md" target="_blank" class="mt-3 text-indigo-600 font-medium hover:underline">View Project →</a>
+
+                    <div class="sm-proj-card-footer">
+                        <a href="https://github.com/sameer52/Sameer-Jain/blob/main/README.md" target="_blank" class="sm-proj-card-link" >
+                            View Project →
+                        </a>
                     </div>
                 </div>
-                <div class="flex flex-col bg-white rounded-2xl shadow hover:shadow-lg transition-all duration-200 overflow-hidden">
-                    <div class="relative">
-                        <img src="assets/img/projects/350z-background-edited.jpg" alt="Placeholder Image" class="w-full h-40 object-cover">
-                        <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-white to-transparent"></div>
-                        <div class="p-6 absolute bottom-0 left-0 w-full h-1/3 items-end">
-                            <h3 class="text-2xl font-semibold text-indigo-600 mb-3">Nissan 350Z</h3>
+                
+                <div class="sm-proj-card"> <!-- Custom PC 1 -->
+                    <div class="sm-proj-card-media">
+                        <img class="sm-proj-card-image" src="assets/img/projects/sameer-pc.jpg" alt="custom pc 1 img" >
+                        <div class="sm-proj-card-gradient"></div>
+                        <div class="sm-proj-card-title-wrapper">
+                            <h3 class="sm-proj-card-title">Custom PC 1</h3>
                         </div>
                     </div>
-                    <div class="px-6 pb-3 flex flex-col flex-grow">
-                        <a href="https://github.com/sameer52/Sameer-Jain/blob/main/README.md" target="_blank" class="mt-3 text-indigo-600 font-medium hover:underline">View Project →</a>
+
+                    <div class="sm-proj-card-footer">
+                        <a href="https://github.com/sameer52/Sameer-Jain/blob/main/README.md" target="_blank" class="sm-proj-card-link" >
+                            View Project →
+                        </a>
                     </div>
                 </div>
-                <div class="flex flex-col bg-white rounded-2xl shadow hover:shadow-lg transition-all duration-200 overflow-hidden">
-                    <div class="relative">
-                        <img src="assets/img/other/placeholder-image-vertical.png" alt="Placeholder Image" class="w-full h-40 object-cover">
-                        <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-white to-transparent"></div>
-                        <div class="p-6 absolute bottom-0 left-0 w-full h-1/3 items-end">
-                            <h3 class="text-2xl font-semibold text-indigo-600 mb-3">Aventador Car</h3>
+                
+                <div class="sm-proj-card"> <!-- Custom PC 2 -->
+                    <div class="sm-proj-card-media">
+                        <img class="sm-proj-card-image" src="assets/img/projects/mya-pc.jpg" alt="custom pc 2 img" >
+                        <div class="sm-proj-card-gradient"></div>
+                        <div class="sm-proj-card-title-wrapper">
+                            <h3 class="sm-proj-card-title">Custom PC 2</h3>
                         </div>
                     </div>
-                    <div class="px-6 pb-3 flex flex-col flex-grow">
-                        <a href="https://github.com/sameer52/Sameer-Jain/blob/main/README.md" target="_blank" class="mt-3 text-indigo-600 font-medium hover:underline">View Project →</a>
+
+                    <div class="sm-proj-card-footer">
+                        <a href="https://github.com/sameer52/Sameer-Jain/blob/main/README.md" target="_blank" class="sm-proj-card-link" >
+                            View Project →
+                        </a>
                     </div>
                 </div>
-                <div class="flex flex-col bg-white rounded-2xl shadow hover:shadow-lg transition-all duration-200 overflow-hidden">
-                    <div class="relative">
-                        <img src="assets/img/other/placeholder-image-vertical.png" alt="Placeholder Image" class="w-full h-40 object-cover">
-                        <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-white to-transparent"></div>
-                        <div class="p-6 absolute bottom-0 left-0 w-full h-1/3 items-end">
-                            <h3 class="text-2xl font-semibold text-indigo-600 mb-3">2018 F1 Car</h3>
+                
+                <div class="sm-proj-card"> <!-- Custom PC 3 -->
+                    <div class="sm-proj-card-media">
+                        <img class="sm-proj-card-image" src="assets/img/other/placeholder-image-vertical.png" alt="custom pc 3 img" >
+                        <div class="sm-proj-card-gradient"></div>
+                        <div class="sm-proj-card-title-wrapper">
+                            <h3 class="sm-proj-card-title">Custom PC 3</h3>
                         </div>
                     </div>
-                    <div class="px-6 pb-3 flex flex-col flex-grow">
-                        <a href="https://github.com/sameer52/Sameer-Jain/blob/main/README.md" target="_blank" class="mt-3 text-indigo-600 font-medium hover:underline">View Project →</a>
+
+                    <div class="sm-proj-card-footer">
+                        <a href="https://github.com/sameer52/Sameer-Jain/blob/main/README.md" target="_blank" class="sm-proj-card-link" >
+                            View Project →
+                        </a>
                     </div>
                 </div>
-                <div class="flex flex-col bg-white rounded-2xl shadow hover:shadow-lg transition-all duration-200 overflow-hidden">
-                    <div class="relative">
-                        <img src="assets/img/projects/personal-pc.jpg" alt="Sameer Personal PC" class="w-full h-40 object-cover">
-                        <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-white to-transparent"></div>
-                        <div class="p-6 absolute bottom-0 left-0 w-full h-1/3 items-end">
-                            <h3 class="text-2xl font-semibold text-indigo-600 mb-3">Custom PC 1</h3>
-                        </div>
-                    </div>
-                    <div class="px-6 pb-3 flex flex-col flex-grow">
-                        <a href="https://github.com/sameer52/Sameer-Jain/blob/main/README.md" target="_blank" class="mt-3 text-indigo-600 font-medium hover:underline">View Project →</a>
-                    </div>
-                </div>
-                <div class="flex flex-col bg-white rounded-2xl shadow hover:shadow-lg transition-all duration-200 overflow-hidden">
-                    <div class="relative">
-                        <img src="assets/img/projects/mya-pc.jpg" alt="Custom PC 2" class="w-full h-40 object-cover">
-                        <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-white to-transparent"></div>
-                        <div class="p-6 absolute bottom-0 left-0 w-full h-1/3 items-end">
-                            <h3 class="text-2xl font-semibold text-indigo-600 mb-3">Custom PC 2</h3>
-                        </div>
-                    </div>
-                    <div class="px-6 pb-3 flex flex-col flex-grow">
-                        <a href="https://github.com/sameer52/Sameer-Jain/blob/main/README.md" target="_blank" class="mt-3 text-indigo-600 font-medium hover:underline">View Project →</a>
-                    </div>
-                </div>
-                <div class="flex flex-col bg-white rounded-2xl shadow hover:shadow-lg transition-all duration-200 overflow-hidden">
-                    <div class="relative">
-                        <img src="assets/img/other/placeholder-image-vertical.png" alt="Custom PC 3" class="w-full h-40 object-cover">
-                        <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-white to-transparent"></div>
-                        <div class="p-6 absolute bottom-0 left-0 w-full h-1/3 items-end">
-                            <h3 class="text-2xl font-semibold text-indigo-600 mb-3">Custom PC 3</h3>
-                        </div>
-                    </div>
-                    <div class="px-6 pb-3 flex flex-col flex-grow">
-                        <a href="https://github.com/sameer52/Sameer-Jain/blob/main/README.md" target="_blank" class="mt-3 text-indigo-600 font-medium hover:underline">View Project →</a>
-                    </div>
-                </div>
-                <div class="flex flex-col bg-white rounded-2xl shadow hover:shadow-lg transition-all duration-200 overflow-hidden">
-                    <div class="relative">
-                        <img src="assets/img/other/placeholder-image-vertical.png" alt="" class="w-full h-40 object-cover">
-                        <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-white to-transparent"></div>
-                        <div class="p-6 absolute bottom-0 left-0 w-full h-1/3 items-end">
-                            <h3 class="text-2xl font-semibold text-indigo-600 mb-3">Example</h3>
-                        </div>
-                    </div>
-                    <div class="px-6 pb-3 flex flex-col flex-grow">
-                        <a href="https://github.com/sameer52/Sameer-Jain/blob/main/README.md" target="_blank" class="mt-3 text-indigo-600 font-medium hover:underline">View Project →</a>
-                    </div>
-                </div>
+                
+            </div>
         </section>
 
-        <section id="skills" class="py-16 sm:py-16 px-4 sm:px-6 bg-gray-100 shadow-inner transition-colors duration-500 scroll-mt-16">
-            <h2 class="text-4xl font-bold mb-12 text-center text-indigo-700 transition-colors duration-500 section-title">
-                Technical Skills
-            </h2>
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 space-y-6">
+        <section id="skills" class="skills-section">
+            <h2 class="skills-section-title">Technical Skills</h2>
+
+            <div class="skills-container">
                 
-                <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition-all duration-200">
-                    <h3 class="text-2xl font-semibold mb-4 text-indigo-600 border-b pb-2 border-indigo-200">
-                        Mechanical Engineering & Design
-                    </h3>
-                    <div class="mt-4 flex flex-wrap gap-3">
-                        <div class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">
-                            Design for Additive Manufacturing (DFAM)
+                <!-- MECHANICAL SKILLS -->
+                <div class="skills-subsection">
+                    <h2 class="skills-subsection-title">Mechanical</h2>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">SolidWorks & CAD</span>
+                            <span class="skill-level-tag">EXP</span>
                         </div>
-                        <div class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">
-                            Root Cause Analysis (RCA)
+                        <div class="skill-bar-container"><div class="bar-fill exp"></div></div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Rapid Prototyping</span>
+                            <span class="skill-level-tag">ADV</span>
                         </div>
-                        <div class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">
-                            Design for Manufacturing (DFM) & Assembly (DFA)
+                        <div class="skill-bar-container"><div class="bar-fill adv"></div></div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Finite Element Analysis</span>
+                            <span class="skill-level-tag">INT</span>
                         </div>
-                        <div class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">
-                            SolidWorks Solid Modeling
+                        <div class="skill-bar-container"><div class="bar-fill int"></div></div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Design for Manufacturing</span>
+                            <span class="skill-level-tag">INT</span>
                         </div>
-                        <div class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">
-                            Finite Element Analysis (FEA)
+                        <div class="skill-bar-container"><div class="bar-fill int"></div></div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Geometric Dimensioning & Tolerancing</span>
+                            <span class="skill-level-tag">INT</span>
                         </div>
-                        <div class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">
-                            GD&T
-                        </div>
-                        <div class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">
-                            Failure Modes & Effects Analysis (FMEA)
-                        </div>
-                        <div class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">
-                            Systems-level Thinking
-                        </div>
-                        <div class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">
-                            Computational Fluid Dynamics (CFD)
-                        </div>
-                        <div class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">
-                            Thermal Design & Heat Transfer Analysis
-                        </div>
+                        <div class="skill-bar-container"><div class="bar-fill int"></div></div>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition-all duration-200">
-                    <h3 class="text-2xl font-semibold mb-4 text-indigo-600 border-b pb-2 border-indigo-200">
-                        Software & Development
-                    </h3>
-                    <div class="mt-4 flex flex-wrap gap-3">
-                        <div class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">
-                            Java
+                <!-- SOFTWARE SKILLS -->
+                <div class="skills-subsection">
+                    <h2 class="skills-subsection-title">Software</h2>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Java</span>
+                            <span class="skill-level-tag">EXP</span>
                         </div>
-                        <div class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">
-                            Python
+                        <div class="skill-bar-container"><div class="bar-fill exp"></div></div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Python (Automation & Data)</span>
+                            <span class="skill-level-tag">ADV</span>
                         </div>
-                        <div class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">
-                            C/C++
+                        <div class="skill-bar-container"><div class="bar-fill adv"></div></div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Embedded C/C++</span>
+                            <span class="skill-level-tag">INT</span>
                         </div>
-                        <div class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">
-                            HTML/CSS/JS
+                        <div class="skill-bar-container"><div class="bar-fill int"></div></div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Linux & Bash</span>
+                            <span class="skill-level-tag">INT</span>
                         </div>
-                        <div class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">
-                            Version Control (Git)
+                        <div class="skill-bar-container"><div class="bar-fill int"></div></div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Git / Version Control</span>
+                            <span class="skill-level-tag">INT</span>
                         </div>
-                        <div class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">
-                            Linux / UNIX
-                        </div>
-                        <div class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">
-                            Bash + Batch (Shell Scripting)
-                        </div>
-                        <div class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">
-                            MATLAB/Simulink
-                        </div>
-                        <div class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">
-                            Apache2 Web Servers
-                        </div>
-                        <div class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">
-                            API Integration & Data Exchange
-                        </div>
-                        <div class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">
-                            Debugging & Optimization
-                        </div>
-                        <div class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">
-                            Automation Scripting (Shell/Bash)
-                        </div>
-                        <div class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">
-                            System-level Software Integration
-                        </div>
-                        <div class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">
-                            Data Visualization & Reporting
-                        </div>
+                        <div class="skill-bar-container"><div class="bar-fill int"></div></div>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition-all duration-200">
-                    <h3 class="text-2xl font-semibold mb-4 text-indigo-600 border-b pb-2 border-indigo-200">
-                        Electronics & Control Systems
-                    </h3>
-                    <div class="mt-4 flex flex-wrap gap-3">
-                        <div class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">
-                            Microcontroller & Microprocessor Programming
+                <!-- ELECTRICAL SKILLS -->
+                <div class="skills-subsection">
+                    <h2 class="skills-subsection-title">Electrical</h2>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Embedded Systems</span>
+                            <span class="skill-level-tag">ADV</span>
                         </div>
-                        <div class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">
-                            Circuit Design & PCB Prototyping
+                        <div class="skill-bar-container"><div class="bar-fill adv"></div></div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Motor Control & Actuation</span>
+                            <span class="skill-level-tag">INT</span>
                         </div>
-                        <div class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">
-                            Closed-loop Control (PID)
+                        <div class="skill-bar-container"><div class="bar-fill int"></div></div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Power Distribution Systems</span>
+                            <span class="skill-level-tag">INT</span>
                         </div>
-                        <div class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">
-                            Sensor Fusion
+                        <div class="skill-bar-container"><div class="bar-fill int"></div></div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Data Acquisition</span>
+                            <span class="skill-level-tag">INT</span>
                         </div>
-                        <div class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">
-                            Power Optimization & Battery Management
+                        <div class="skill-bar-container"><div class="bar-fill int"></div></div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Sensor Integration & Fusion</span>
+                            <span class="skill-level-tag">BSC</span>
                         </div>
-                        <div class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">
-                            Navigation & Obstacle Avoidance Logic
-                        </div>
-                        <div class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">
-                            Data Acquisition (DAQ) & Logging
-                        </div>
-                        <div class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">
-                            Firmware Debugging & Calibration
-                        </div>
-                        <div class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">
-                            Electrical Harness Design
-                        </div>
+                        <div class="skill-bar-container"><div class="bar-fill bsc"></div></div>
                     </div>
                 </div>
+
+                <p class="font-medium text-gray-300">Basic / Intermediate / Advanced / Expert</p>
 
             </div>
         </section>
 
-        <section id="certifications" class="py-16 sm:py-16 px-4 sm:px-6 bg-gray-50 shadow-inner transition-colors duration-500 scroll-mt-16">
-            <h2 class="text-4xl font-bold mb-12 text-center text-indigo-700 transition-colors duration-500 section-title">Certifications</h2>
-            
-            <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <section id="certifications" class="cert-section">
+            <h2 class="cert-title section-title">Certifications</h2>
 
-                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-200 transform hover:-translate-y-1 border-t-4 border-indigo-500">
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">CSWA</h3>
-                    <p class="text-sm font-medium text-indigo-600 mb-3">Certified SolidWorks Associate</p>
-                    <p class="text-gray-600 mb-4">
+            <div class="cert-grid">
+                <!-- CSWA -->
+                <article class="cert-card">
+                    <h3 class="cert-card-title">CSWA</h3>
+                    <p class="cert-card-subtitle">Certified SolidWorks Associate</p>
+                    <p class="cert-card-description">
                         Demonstrates core knowledge of SolidWorks practices and fundamental engineering drafting principles.
                     </p>
-                    <div class="flex justify-between items-center text-sm">
-                        <span class="text-gray-500">Issued: [January, 2025]</span>
-                        <a href="[CSWA_CERTIFICATE_LINK]" target="_blank" rel="noopener noreferrer" 
-                        class="text-indigo-600 hover:text-indigo-800 font-medium">
-                            View &rarr;
+
+                    <div class="cert-card-footer">
+                        <span class="cert-card-date">Issued: [January, 2025]</span>
+                        <a href="[CSWA_CERTIFICATE_LINK]" target="_blank" rel="noopener noreferrer" class="cert-card-link" >
+                            View →
                         </a>
                     </div>
-                </div>
+                </article>
 
-                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-200 transform hover:-translate-y-1 border-t-4 border-indigo-500">
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">CSWP</h3>
-                    <p class="text-sm font-medium text-indigo-600 mb-3">Certified SolidWorks Professional</p>
-                    <p class="text-gray-600 mb-4">
+                <!-- CSWP -->
+                <article class="cert-card">
+                    <h3 class="cert-card-title">CSWP</h3>
+                    <p class="cert-card-subtitle">Certified SolidWorks Professional</p>
+                    <p class="cert-card-description">
                         Validates the ability to successfully design and analyze complex parts and assemblies using advanced features.
                     </p>
-                    <div class="flex justify-between items-center text-sm">
-                        <span class="text-gray-500">Issued: [April, 2025]</span>
-                        <a href="[CSWP_CERTIFICATE_LINK]" target="_blank" rel="noopener noreferrer" 
-                        class="text-indigo-600 hover:text-indigo-800 font-medium">
-                            View &rarr;
+
+                    <div class="cert-card-footer">
+                        <span class="cert-card-date">Issued: [April, 2025]</span>
+                        <a href="[CSWP_CERTIFICATE_LINK]" target="_blank" rel="noopener noreferrer" class="cert-card-link" >
+                            View →
                         </a>
                     </div>
-                </div>
+                </article>
 
-                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-200 transform hover:-translate-y-1 border-t-4 border-indigo-500">
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">PCEP</h3>
-                    <p class="text-sm font-medium text-indigo-600 mb-3">Certified Entry-Level Python Programmer</p>
-                    <p class="text-gray-600 mb-4">
+                <!-- PCEP -->
+                <article class="cert-card">
+                    <h3 class="cert-card-title">PCEP</h3>
+                    <p class="cert-card-subtitle">Certified Entry-Level Python Programmer</p>
+                    <p class="cert-card-description">
                         Confirms foundational knowledge of Python programming concepts, syntax, and basic data structures.
                     </p>
-                    <div class="flex justify-between items-center text-sm">
-                        <span class="text-gray-500">Issued: [September, 2025]</span>
-                        <a href="[PCEP_CERTIFICATE_LINK]" target="_blank" rel="noopener noreferrer" 
-                        class="text-indigo-600 hover:text-indigo-800 font-medium">
-                            View &rarr;
+
+                    <div class="cert-card-footer">
+                        <span class="cert-card-date">Issued: [September, 2025]</span>
+                        <a class="cert-card-link" href="[PCEP_CERTIFICATE_LINK]" target="_blank" rel="noopener noreferrer" >
+                            View →
                         </a>
                     </div>
-                </div>
-
+                </article>
             </div>
         </section>
 
-        <section id="contact" class="py-16 sm:py-16 px-4 sm:px-6 bg-gray-100 shadow-inner transition-colors duration-500 scroll-mt-16">
-            <h2 class="text-4xl font-bold mb-8 text-center text-indigo-700 transition-colors duration-500 section-title">Get In Touch</h2>
-            
-            <div class="max-w-4xl mx-auto space-y-6 text-center">
-                <p class="text-xl text-gray-700">
+        <section id="contact" class="contact-section">
+            <h2 class="contact-title section-title">Get In Touch</h2>
+
+            <div class="contact-container">
+                <p class="contact-description">
                     I'm always open to new opportunities, collaborations, and conversations.
                 </p>
-                
-                <div class="flex flex-col sm:flex-row justify-center items-center gap-6 pt-4">
 
-                    <a href="https://www.linkedin.com/in/sameerjain0841/" target="_blank" rel="noopener noreferrer"
-                    class="flex items-center justify-center w-full sm:w-64 px-8 py-3 text-lg font-semibold text-white bg-blue-700 rounded-lg shadow-md hover:bg-blue-800 transition-all duration-200 transform hover:scale-105">
-                        <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM4 17h4v4H4v-4zM6 4.5A1.5 1.5 0 1 1 6 7.5 1.5 1.5 0 0 1 6 4.5z"/>
-                        </svg>
+                <div class="contact-actions">
+                    <a class="contact-btn contact-btn--linkedin" href="https://www.linkedin.com/in/sameerjain0841/" target="_blank" rel="noopener noreferrer" >
+                        <img class="contact-btn-icon" src="assets/img/other/linkedin-logo.png" alt="LinkedIn Icon" >
                         LinkedIn
                     </a>
 
-                    <a href="mailto:burner@gmail.com"
-                    class="flex items-center justify-center w-full sm:w-64 px-8 py-3 text-lg font-semibold text-indigo-700 border-2 border-indigo-700 rounded-lg shadow-md hover:bg-indigo-700 hover:text-white transition-all duration-200 transform hover:scale-105">
-                        <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.85-6.75A2 2 0 0113 2h8a2 2 0 012 2v16a2 2 0 01-2 2H3a2 2 0 01-2-2V4a2 2 0 012-2h8.15z"/>
-                        </svg>
+                    <a class="contact-btn contact-btn--email" href="mailto:burner@gmail.com" >
+                        <span class="contact-btn-icon-wrapper">
+                            <img class="contact-btn-icon-small" src="assets/img/other/email-envelope-white-icon.png" alt="Email Icon" >
+                        </span>
                         Send Email
                     </a>
-                    
                 </div>
             </div>
         </section>
@@ -750,13 +763,13 @@
                 <!-- Optional: Quick Navigation or Social Links can go here -->
 
                 <!-- Copyright -->
-                <p class="text-sm font-medium">
-                    &copy; 2024 Sameer Jain. All rights reserved.
+                <p class="text-sm font-medium text-gray-500">
+                    &copy; 2025 Sameer Jain. All rights reserved.
                 </p>
                 <!-- Design Credit (Optional) -->
-                <p class="text-xs text-gray-500">
+                <!-- <p class="text-xs text-gray-500">
                     Designed and built for excellence.
-                </p>
+                </p> -->
             </div>
         </div>
     </footer>

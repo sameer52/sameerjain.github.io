@@ -1,82 +1,104 @@
-/* sm-projs.css */
+/* sm-project.css */
 
-/* for small screens, reduce the text size to sm (from md) */
+/* -------------------------------- */
+/* Card Container */
+/* -------------------------------- */
 
 .sm-proj-card {
-    /* @apply flex flex-col bg-white rounded-2xl shadow hover:shadow-lg transition-all duration-200 overflow-hidden; */
-    
     display: flex;
     flex-direction: column;
-    background-color: #ffffff; /* bg-white */
-    border-radius: 1rem; /* rounded-2xl */
-    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1); /* shadow */
+    background-color: #ffffff;
+    border-radius: 1rem;
     overflow: hidden;
 
-    /* transition-all duration-200 */
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 200ms;
+    box-shadow:
+        0 1px 3px rgb(0 0 0 / 0.1),
+        0 1px 2px rgb(0 0 0 / 0.1);
+
+    transition: box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Hover effect */
 .sm-proj-card:hover {
-    /* hover:shadow-lg */
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); 
+    box-shadow:
+        0 10px 15px -3px rgb(0 0 0 / 0.1),
+        0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+/* -------------------------------- */
+/* Media / Image Section */
+/* -------------------------------- */
+
+.sm-proj-card-media {
+    position: relative;
 }
 
 .sm-proj-card-image {
-    /* @apply w-full h-40 object-cover; */
-    width: 100%; /* w-full */
-    height: 10rem; /* h-40 (160px) */
-    object-fit: cover; /* object-cover */
+    width: 100%;
+    height: 10rem; /* 160px */
+    object-fit: cover;
+    display: block;
+}
+
+/* Gradient overlay */
+.sm-proj-card-gradient {
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 50%;
+    background: linear-gradient(to top, #ffffff, transparent);
+    pointer-events: none;
+}
+
+/* Title overlay */
+.sm-proj-card-title-wrapper {
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 33.33%;
+    padding: 0 1.5rem;
+
+    display: flex;
+    align-items: flex-end;
+
+    pointer-events: none;
 }
 
 .sm-proj-card-title {
-    /* @apply text-2xl font-semibold text-indigo-600 mb-3; */
-    font-size: 1rem; /* Equivalent to text-xl on mobile */
+    font-size: 1.2rem;
     line-height: 1.5rem;
-    font-weight: 600; /* Assuming you want the font-semibold from before */
-    color: #4f46e5; /* Example color, if needed */
-    margin-bottom: 0.75rem;
+    font-weight: 600;
+    color: #4f46e5;
+    margin-bottom: 0.15rem;
 }
 
+/* -------------------------------- */
+/* Footer */
+/* -------------------------------- */
+
 .sm-proj-card-footer {
-    /* @apply px-6 pb-3 flex flex-col flex-grow; */
-    padding-left: 1.5rem; /* px-6 */
-    padding-right: 1.5rem; /* px-6 */
-    padding-bottom: 0.75rem; /* pb-3 */
-    
-    display: flex; /* flex */
-    flex-direction: column; /* flex-col */
-    flex-grow: 1; /* flex-grow (Allows the footer to push content to the bottom) */
+    padding: 0 1.5rem 0.75rem;
+
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .sm-proj-card-link {
-    /* @apply mt-3 text-indigo-600 font-medium hover:underline; */
-    margin-top: 0.75rem; /* mt-3 */
-    color: #4f46e5; /* text-indigo-600 */
-    font-weight: 500; /* font-medium */
+    margin-top: 0.75rem;
+    color: #4f46e5;
+    font-weight: 500;
+    text-decoration: none;
 }
 
-/* Hover effect */
 .sm-proj-card-link:hover {
-    /* hover:underline */
     text-decoration: underline;
 }
 
-/* -------------------------------------- */
-/* ---- Media Query for Desktop (md) ---- */
-/* 
-   when the screen is larger (than mobile)
-   it will take the following settings
-*/
-/* -------------------------------------- */
+/* -------------------------------- */
+/* Desktop Overrides */
+/* -------------------------------- */
 
 @media (min-width: 768px) {
-    /* Main Flex Container: md:flex-row */
     .sm-proj-card-title {
-        /* Equivalent to text-2xl on desktop */
-        font-size: 1.5rem; 
+        font-size: 1.5rem;
         line-height: 2rem;
     }
 }
