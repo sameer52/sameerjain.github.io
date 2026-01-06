@@ -1,17 +1,35 @@
-replace portrait (about section)
-fix CSS
-fix section CSS and other CSS class names
-correct "Career at a Glance" data (about section)
-add photo of spool holder and PC 3 projects (projects section)
-correct certification padding CSS (mobile view)(certifications section)
-correct skills section padding (skills section)
-shorten experience section wording (experience section)
-fix hamburger menu (mobile view) (header section)
-add aother links (github & OSF/RG)(etsy?) (new section)
-correct the email link (contact section)
-fix certification links (certifications section)
-make project links/pages (projects section)
-add photos to the project folder
-change background of company logos (experience section)
-change favicon
-change the "Sameer Jain" at the top left  (header section)
+TIER 1 — MUST FIX (Broken / Credibility Impact)
+
+Fix hamburger menu (mobile view) (header section)
+Correct the email link (contact section)
+Fix certification links (certifications section)
+Correct certification padding CSS (mobile view) (certifications section)
+Correct skills section padding (skills section)
+Change / fix text over the project cards (hard to read) (projects section)
+Correct "Career at a Glance" data (about section)
+
+TIER 2 — HIGH IMPACT VISUAL & CONTENT POLISH
+
+Replace portrait (about section)
+Add photos to the project folder
+Add photo of spool holder project (projects section)
+Add photo of PC projects (projects section)
+Update the "PC CFD Analysis" project image (projects section)
+Shorten experience section wording (experience section)
+Change background of company logos (experience section)
+Change favicon
+
+TIER 3 — COMPLETENESS / PROFESSIONAL SIGNALS
+
+Make project links / pages (projects section)
+Add other links (GitHub, OSF / RG, Etsy?) (new section)
+Change "Sameer Jain" to "SJ" (header section)
+Fix vertical alignment of "Sameer Jain" (header section)
+
+TIER 4 — NICE TO HAVE / POST-INTERVIEW
+
+Fix CSS (Tailwind to raw CSS) (full refactor)
+Standardize colors across the webpage
+Reduce small card grid size to 4-wide on large screens
+Change image resolution strategy (multiple resolutions)
+Make skills subsections clickable with detailed experience pages (skills section)
