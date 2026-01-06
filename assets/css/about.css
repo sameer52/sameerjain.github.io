@@ -18,21 +18,21 @@
 }
 
 /* Section Title */
-.about-title {
-    font-size: 2.25rem;     /* text-4xl */
-    font-weight: 700;       /* font-bold */
-    margin-bottom: 2rem;    /* mb-8 */
-    text-align: center;     /* text-center */
-    color: #303F9F;         /* text-indigo-700 */
+.about-section-title {
+    font-size: 2.25rem;      /* text-4xl */
+    font-weight: 700;        /* font-bold */
+    margin-bottom: 2rem;     /* mb-8 */
+    text-align: center;      /* text-center */
+    color: #303F9F;        /* text-indigo-700 */
     transition: color 500ms;
 }
 
 /* Flex Wrapper */
 .about-flex-wrapper {
     display: flex;
-    flex-direction: column; /* flex-col */
+    flex-direction: column;  /* flex-col */
     align-items: flex-start; /* items-start */
-    gap: 2.5rem;            /* gap-10 (40px) */
+    gap: 2.5rem;             /* gap-10 (40px) */
 }
 
 /* Image Column */
@@ -100,6 +100,16 @@
     }
 }
 
+/* --------------------- */
+/* ABOUT SECTION DIVIDER */
+/* --------------------- */
+
+.divider {
+    margin-top: 2rem;        /* mt-8 (8 * 0.25rem) */
+    border: 0;               /* Reset default browser border */
+    border-top: 1px solid #e5e7eb; /* border-gray-200 */
+}
+
 /* -------------------------- */
 /* CAREER AT A GLANCE SECTION */
 /* -------------------------- */
@@ -129,11 +139,15 @@
 /* Stat Card Styling */
 .stat-card {
     background-color: #e0e7ff; /* bg-indigo-100 */
-    box-shadow: 0 0 0 1px #a5b4fc; /* ring-1 ring-indigo-300 */
+    
+    /* ADDED BORDER: 1px solid thin border */
+    border: 2px solid #a5acda; /* border-indigo-600 */
+    
+    /* COMBINED SHADOW: Keeping the shadow-sm effect */
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); 
+    
     padding: 0.75rem;          /* p-3 */
     border-radius: 0.75rem;    /* rounded-xl */
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
-    
     display: flex;
     flex-direction: column;    /* flex-col */
     align-items: center;       /* items-center */
@@ -148,7 +162,7 @@
 }
 
 .stat-label {
-    font-size: 1rem;        /* text-md */
+    font-size: 0.9rem;        /* text-md */
     color: #6b7280;         /* text-gray-500 */
     font-weight: 500;       /* font-medium */
     margin-top: 0.25rem;    /* mt-1 */
@@ -175,4 +189,75 @@
     }
 }
 
+/* ----------------------- */
+/* CAREER AT A GLANCE LINK */
+/* ----------------------- */
 
+/* The Anchor Wrapper */
+.stat-link {
+    text-decoration: none;      /* Remove default underline */
+    display: block;             /* Ensure it fills the grid cell */
+    cursor: pointer;            /* cursor-pointer */
+    
+    /* Animation settings */
+    transition-property: all;   /* transition-all */
+    transition-duration: 200ms; /* duration-200 */
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover Effect: Scale up to 105% */
+.stat-link:hover {
+    transform: scale(1.05);     /* hover:scale-[1.05] */
+}
+
+/* Keep card colors consistent even inside a link */
+.stat-link .stat-card {
+    transition: background-color 0.2s;
+}
+
+/* Optional: change background slightly on hover */
+.stat-link:hover .stat-card {
+    background-color: #ebf0ff; /* A slightly lighter indigo-50 */
+}
+
+/* Set the card to relative so the arrow stays inside it */
+.stat-link-with-arrow .stat-card {
+    position: relative;
+    padding-right: 2rem; /* Make extra room for the arrow */
+}
+
+/* Create the arrow using a pseudo-element */
+.stat-link-with-arrow .stat-card::after {
+    /* content: '→'; */
+    /* content: '►'; */
+    /* content: '⇒'; */
+    /* content: '⇨'; */
+    content: '⇾';
+    /* content: '➜'; */
+    /* content: '➣'; */
+    /* content: '➤'; */
+    /* content: '➨'; */
+    /* content: '➧'; */
+    /* content: '➪'; */
+    /* content: '➭'; */
+    /* content: '➯'; */
+    /* content: '⟶'; */
+    /* content: '⟾'; */
+    /* content: '⤇'; */
+    position: absolute;
+    right: 0.75rem;          /* Distance from right edge */
+    top: 50%;
+    transform: translateY(-50%); /* Perfectly center vertically */
+    
+    font-size: 1.25rem;
+    color: #4338ca;          /* Indigo color */
+    font-weight: bold;
+    opacity: 0.7;
+    transition: all 0.2s ease; /* Smooth animation for hover */
+}
+
+/* Animation: Move the arrow slightly to the right on hover */
+.stat-link-with-arrow:hover .stat-card::after {
+    opacity: 1;
+    transform: translateY(-50%) translateX(4px); /* Moves right 4px */
+}
