@@ -140,7 +140,7 @@
 .stat-card {
     background-color: #e0e7ff; /* bg-indigo-100 */
     
-    /* ADDED BORDER: 1px solid thin border */
+    /* ADDED BORDER: solid thin border */
     border: 2px solid #a5acda; /* border-indigo-600 */
     
     /* COMBINED SHADOW: Keeping the shadow-sm effect */

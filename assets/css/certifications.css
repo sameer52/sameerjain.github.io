@@ -1,4 +1,4 @@
-certifications.css
+/* certifications.css */
 
 /* -------------------------------- */
 /* Certifications Section */
@@ -6,10 +6,12 @@ certifications.css
 
 .cert-section {
     padding: 4rem 1rem;
-    background-color: #f9fafb; /* gray-50 */
-    box-shadow: inset 0 2px 4px rgb(0 0 0 / 0.06);
+    background-color: #f9fafb;
     scroll-margin-top: 4rem;
     transition: background-color 500ms;
+
+
+    box-shadow: inset 0 2px 4px rgb(0 0 0 / 0.06);
 }
 
 /* -------------------------------- */
